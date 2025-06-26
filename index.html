@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Estadística de Agrónomos</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="navbar">
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">News</a>
+      <a href="#">Contact</a>
+      <a href="#">About</a>
+    </nav>
+  </div>
+
+  <div class="container">
+    <aside class="sidebar">
+      <h3>Provincias</h3>
+      <button onclick="filtrar('Todos')">Todos</button>
+      <button onclick="filtrar('Posadas')">Posadas</button>
+      <button onclick="filtrar('Oberá')">Oberá</button>
+      <button onclick="filtrar('Eldorado')">Eldorado</button>
+    </aside>
+
+<main>
+    <h2>Estadística de Agrónomos en Misiones</h2>
+
+    <div class="filters">
+      <label for="meses">Filtrar mes:</label>
+      <select id="meses">
+        <option value="all">Todos</option>
+        <option value="Enero">Enero</option>
+        <option value="Febrero">Febrero</option>
+        <option value="Marzo">Marzo</option>
+        <option value="Abril">Abril</option>
+        <option value="Mayo">Mayo</option>
+      </select>
+    </div>
+
+<div class="chart-container">
+  <canvas id="myChart"></canvas>
+</div>
+  </main>
+
+<div class="texto-centrado">
+  <p>
+    Este dashboard presenta la evolución mensual de agrónomos registrados en la provincia de Misiones. 
+    Los datos permiten identificar tendencias, detectar meses con mayor actividad y tomar decisiones informadas en relación a políticas agrarias y planificación territorial.
+  </p>
+</div>
+
+  <script src="script.js"></script>
+</body>
+</html>
